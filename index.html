@@ -3,6 +3,7 @@
 <head>
     <title>Any Wincing - Songwriter & Producer</title>
     <style>
+        /* Existing Styles */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #F8F8F1;
@@ -41,9 +42,20 @@
         h1, h2 {
             animation: colorChange 5s infinite;
         }
+
+        .blink {
+            animation: blinker 1.5s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
+
+    <center>
+        <h1 class="blink">Site Under Construction</h1>
+    </center>
 
     <center>
         <h1>Any Wincing</h1>
@@ -76,11 +88,16 @@
     
     <center>
         <p><em>Copyright &#169; <span id="currentYear"></span> Ghost Courter</em></p>
+        <!-- Added: Visitor Counter -->
+        <p>You are visitor number: <span id="visitorCount"></span></p>
     </center>
 
     <script>
         // Update the copyright year dynamically
         document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+        // Added: Simple Visitor Counter (Note: This is not a real counter, just for comedic effect)
+        document.getElementById("visitorCount").textContent = Math.floor(Math.random() * 1000) + 1;
     </script>
 
 </body>
