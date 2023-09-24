@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #FFFFFF;
+            background-color: #F8F8F1;
             color: #000000;
             margin: 0;
             padding: 0;
@@ -31,18 +31,25 @@
         h1, h2, h4, ul, p {
             font-family: 'Arial', sans-serif;
         }
+        h1 {
+            animation: flash 1s infinite alternate;
+        }
+        @keyframes flash {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
 
     <center>
-        <marquee><h1>Any Wincing</h1></marquee>
+        <h1>Any Wincing</h1>
         <p>Music from Washington, D.C.</p>
     </center>
     <hr width="75%">
     
     <center>
-        <p><a href="https://open.spotify.com/artist/0UFBj7gPdYLZHJ9vEQtTDA">Spotify</a> | <a href="https://music.apple.com/us/artist/any-wincing/1703117180">Apple</a> | <a href="https://music.youtube.com/channel/UCMhTIHx4Z_xLlTguLDbWfGQ">YouTube</a></p>
+        <p><a href="https://open.spotify.com/artist/0UFBj7gPdYLZHJ9vEQtTDA">Spotify</a> | <a href="https://music.apple.com/us/artist/any-wincing/1703117180">Apple</a> | <a href="https://music.youtube.com/channel/UCMhTIHx4Z_xLlTguLDbWfGQ">YouTube</a> | <a href="https://www.instagram.com/anywincing/">Instagram</a></p>
     </center>
 
     <center>
@@ -66,8 +73,13 @@
     <hr width="40%">
     
     <center>
-        <p><em>Copyright &#169; 2023 Ghost Courter. All rights reserved.</em></p>
+        <p><em>Copyright &#169; <span id="currentYear"></span> Ghost Courter. All rights reserved.</em></p>
     </center>
+
+    <script>
+        // Update the copyright year dynamically
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
