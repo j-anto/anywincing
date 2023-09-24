@@ -31,12 +31,15 @@
         h1, h2, h4, ul, p {
             font-family: 'Arial', sans-serif;
         }
-        h1 {
-            animation: flash 1s infinite alternate;
+        @keyframes colorChange {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: yellow; }
+            100% { color: red; }
         }
-        @keyframes flash {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        h1, h2 {
+            animation: colorChange 5s infinite;
         }
     </style>
 </head>
@@ -49,7 +52,7 @@
     <hr width="75%">
     
     <center>
-        <p><a href="https://open.spotify.com/artist/0UFBj7gPdYLZHJ9vEQtTDA">Spotify</a> | <a href="https://music.apple.com/us/artist/any-wincing/1703117180">Apple</a> | <a href="https://music.youtube.com/channel/UCMhTIHx4Z_xLlTguLDbWfGQ">YouTube</a> | <a href="https://www.instagram.com/anywincing/">Instagram</a></p>
+        <p><a href="https://open.spotify.com/artist/0UFBj7gPdYLZHJ9vEQtTDA" target="_blank">Spotify</a> | <a href="https://music.apple.com/us/artist/any-wincing/1703117180" target="_blank">Apple</a> | <a href="https://music.youtube.com/channel/UCMhTIHx4Z_xLlTguLDbWfGQ" target="_blank">YouTube</a> | <a href="https://www.instagram.com/anywincing/" target="_blank">Instagram</a></p>
     </center>
 
     <center>
@@ -57,7 +60,6 @@
             <tr align="center" valign="top">
                 <td>
                     <h2>Latest Music</h2>
-                    <p>Music from current project:</p>
                     <iframe style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=3744970695/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://anywincing.bandcamp.com/track/all-over-again">All Over Again by Any Wincing</a></iframe>
                 </td>
             </tr>
@@ -73,7 +75,7 @@
     <hr width="40%">
     
     <center>
-        <p><em>Copyright &#169; <span id="currentYear"></span> Ghost Courter. All rights reserved.</em></p>
+        <p><em>Copyright &#169; <span id="currentYear"></span> Ghost Courter</em></p>
     </center>
 
     <script>
