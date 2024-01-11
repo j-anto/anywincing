@@ -12,18 +12,18 @@
             color: #ffffff;
             margin: 0;
         }
-        .container {
+        .container, .container-fluid {
             padding: 20px;
         }
         .link-list {
-            text-align: center;
+            text-align: left;
             list-style-type: none;
             padding: 0;
-            margin-bottom: 40px;
+            margin: 0;
+            display: flex;
         }
         .link-list li {
-            display: inline;
-            margin: 0 10px;
+            margin-right: 20px; /* Spacing between links */
         }
         .link-list a {
             color: #ffdd40;
@@ -45,9 +45,9 @@
         hr {
             border-color: #ffdd40;
         }
-        h1, h2 {
+        h1, h2, p {
             color: #ffdd40;
-            text-align: center;
+            text-align: left;
         }
         .footer-text {
             text-align: center;
@@ -92,7 +92,6 @@
     </main>
     <script>
         document.getElementById("currentYear").textContent = new Date().getFullYear();
-        // Placeholder for real visitor count logic
         document.getElementById("visitorCount").textContent = 'Loading...';
     </script>
 </body>
