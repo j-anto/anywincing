@@ -3,38 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <title>Any Wincing - Songwriter & Producer</title>
     <style>
         body {
-            font-family: 'Courier New', monospace;
+            font-family: 'Helvetica', monospace;
             background-color: #001f1f;
             color: #ffffff;
             margin: 0;
+            padding: 20px; /* Adds padding around the entire body to create a margin effect */
         }
-        .container, .container-fluid {
-            padding: 20px;
+        .container-fluid, .container {
+            margin: 0 auto; /* Centers the container */
+            max-width: 1200px; /* Maximum width of the container */
+            width: 100%;
+            padding-bottom: 20px;
         }
         .link-list {
-            text-align: center;
+            display: flex;
+            justify-content: center;
             list-style-type: none;
             padding: 0;
             margin: 0;
-            display: flex;
+            height: 100%;
         }
         .link-list li {
-            margin-right: 10px; /* Spacing between links */
+            padding: 0 10px;
         }
         .link-list a {
             color: #ffdd40;
             text-decoration: none;
-            font-weight: bold;
+            font-style: italic;
         }
         .music-embeds {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+            padding-bottom: 20px;
         }
         .music-embeds iframe {
             border: 0;
@@ -45,9 +50,16 @@
         hr {
             border-color: #ffdd40;
         }
-        h1, h2, p {
+        h1, h2 {
+            font-family: 'Helvetica', sans-serif; /* Changes the font of h1 and h2 to Helvetica */
             color: #ffdd40;
             text-align: left;
+        }
+        p {
+            color: #ffdd40;
+            text-align: left;
+            padding-bottom: 20px;
+            font-style: italic;
         }
         .footer-text {
             text-align: center;
@@ -64,35 +76,35 @@
 <body>
     <nav class="container-fluid">
         <ul class="link-list">
-            <li><a href="https://open.spotify.com/artist/0UFBj7gPdYLZHJ9vEQtTDA" target="_blank">Spotify</a></li>
-            <li><a href="https://music.apple.com/us/artist/any-wincing/1703117180" target="_blank">Apple</a></li>
-            <li><a href="https://music.youtube.com/channel/UCMhTIHx4Z_xLlTguLDbWfGQ" target="_blank">YouTube</a></li>
-            <li><a href="https://www.instagram.com/anywincing/" target="_blank">Instagram</a></li>
+            <li><a href="https://open.spotify.com/artist/0UFBj7gPdYLZHJ9vEQtTDA" target="_blank">spotify</a></li>
+            <li><a href="https://music.apple.com/us/artist/any-wincing/1703117180" target="_blank">apple</a></li>
+            <li><a href="https://music.youtube.com/channel/UCMhTIHx4Z_xLlTguLDbWfGQ" target="_blank">youtube</a></li>
+            <li><a href="https://www.instagram.com/anywincing/" target="_blank">instagram</a></li>
         </ul>
     </nav>
     <main class="container">
-        <h1>Any Wincing</h1>
-        <p>Music from Washington, D.C.</p>
+        <h1>any wincing</h1>
+        <p>music from washington, d.c.</p>
         <hr>
-        <h2>Latest Music</h2>
+        <h2>latest music</h2>
         <div class="music-embeds">
             <!-- Embed 1 -->
             <iframe src="https://bandcamp.com/EmbeddedPlayer/track=3744970695/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless></iframe>
             <!-- Embed 2 - Placeholder for future embed -->
             <!-- Embed 3 - Placeholder for future embed -->
         </div>
-        <h2>Contact</h2>
-        <p>Email: anywincing [at] gmail.com</p>
+        <h2>contact</h2>
+        <p>email: anywincing [at] gmail.com</p>
         <hr>
         <div class="footer-text">
-            <p><em>Copyright &#169; <span id="currentYear"></span> Ghost Courter</em></p>
+            <p><em>copyright &#169; <span id="currentYear"></span> ghost courter</em></p>
             <!-- Placeholder for Real Visitor Counter -->
-            <p>Visitor count: <span id="visitorCount">[Visitor Count]</span></p>
+            <p>visitor count: <span id="visitorCount">[Visitor Count]</span></p>
         </div>
     </main>
     <script>
         document.getElementById("currentYear").textContent = new Date().getFullYear();
-        document.getElementById("visitorCount").textContent = 'Loading...';
+        document.getElementById("visitorCount").textContent = 'loading...';
     </script>
 </body>
 </html>
