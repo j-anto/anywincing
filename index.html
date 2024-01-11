@@ -9,38 +9,60 @@
         body {
             font-family: 'Courier New', monospace;
             background-color: #001f1f;
-            color: #000000;
+            color: #ffffff;
+            margin: 0;
         }
         .container {
             padding: 20px;
-        }
-        .nostalgic-img {
-            border: 3px solid #000;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
         }
         .link-list {
             text-align: center;
             list-style-type: none;
             padding: 0;
+            margin-bottom: 40px;
         }
         .link-list li {
             display: inline;
             margin: 0 10px;
         }
         .link-list a {
-            color: inherit;
+            color: #ffdd40;
             text-decoration: none;
+            font-weight: bold;
+        }
+        .music-embeds {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .music-embeds iframe {
+            border: 0;
+            width: 100%;
+            max-width: 350px;
+            height: 442px;
+        }
+        hr {
+            border-color: #ffdd40;
+        }
+        h1, h2 {
+            color: #ffdd40;
+            text-align: center;
+        }
+        .footer-text {
+            text-align: center;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .music-embeds {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <nav class="container-fluid">
-        <ul>
-            <li><strong>Any Wincing</strong></li>
-        </ul>
         <ul class="link-list">
             <li><a href="https://open.spotify.com/artist/0UFBj7gPdYLZHJ9vEQtTDA" target="_blank">Spotify</a></li>
             <li><a href="https://music.apple.com/us/artist/any-wincing/1703117180" target="_blank">Apple</a></li>
@@ -53,14 +75,20 @@
         <p>Music from Washington, D.C.</p>
         <hr>
         <h2>Latest Music</h2>
-        <iframe style="border: 0; width: 100%; max-width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=3744970695/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://anywincing.bandcamp.com/track/all-over-again">All Over Again by Any Wincing</a></iframe>
-        <img src="https://source.unsplash.com/featured/?musicstudio" alt="Music Studio" class="nostalgic-img" />
+        <div class="music-embeds">
+            <!-- Embed 1 -->
+            <iframe src="https://bandcamp.com/EmbeddedPlayer/track=3744970695/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless></iframe>
+            <!-- Embed 2 - Placeholder for future embed -->
+            <!-- Embed 3 - Placeholder for future embed -->
+        </div>
         <h2>Contact</h2>
         <p>Email: anywincing [at] gmail.com</p>
         <hr>
-        <p><em>Copyright &#169; <span id="currentYear"></span> Ghost Courter</em></p>
-        <!-- Placeholder for Real Visitor Counter -->
-        <p>Visitor count: <span id="visitorCount">[Visitor Count]</span></p>
+        <div class="footer-text">
+            <p><em>Copyright &#169; <span id="currentYear"></span> Ghost Courter</em></p>
+            <!-- Placeholder for Real Visitor Counter -->
+            <p>Visitor count: <span id="visitorCount">[Visitor Count]</span></p>
+        </div>
     </main>
     <script>
         document.getElementById("currentYear").textContent = new Date().getFullYear();
